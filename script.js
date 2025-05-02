@@ -70,9 +70,9 @@ const availableBooks = books.filter((book) => {
 console.log(availableBooks);
 
 const disountedBooks = availableBooks.map((discountedBook) => {
-    let sconto = parseFloat(discountedBook.price) * 0.2
+    let sconto = (parseFloat(discountedBook.price) * 0.2).toFixed(2)
     let prezzoScontato = parseFloat(discountedBook.price) - sconto
-    discountedBook.price = prezzoScontato
+    discountedBook.price = `${prezzoScontato}€`
     return discountedBook
 })
 
