@@ -105,7 +105,9 @@ if (areAuthorAdults) {
 } else {
     authors.sort((a, b) => b.age - a.age)
 }
-
+// posso anche scriverla:
+// authors.sort((a, b) => a.age - b.age) * (areAuthorAdults ? 1 : -1)
+// se sono tutti adulti moltiplico per 1 e rimane invariata altrimenti moltiplico per -1 inverto il segno e quindi anche l'ordine
 
 console.log(authors);
 
@@ -116,7 +118,7 @@ console.log(age);
 
 const agesSum = age.reduce((acc, cur) => {
     return acc + cur
-})
+}, 0)
 
 console.log(agesSum);
 
