@@ -57,6 +57,10 @@ const longBooksTitles = longBooks.map((longBook) => {
 
 console.log(longBooksTitles);
 
+longBooksTitles.forEach((longBooktitle) => {
+    return console.log(longBooktitle);
+})
+
 
 
 const availableBooks = books.filter((book) => {
