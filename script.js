@@ -100,7 +100,12 @@ const areAuthorAdults = authors.every((author) => {
 
 console.log(areAuthorAdults);
 
-authors.sort((a, b) => b.age - a.age)
+if (areAuthorAdults) {
+    authors.sort((a, b) => a.age - b.age)
+} else {
+    authors.sort((a, b) => b.age - a.age)
+}
+
 
 console.log(authors);
 
