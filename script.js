@@ -82,4 +82,32 @@ const fullPricedBook = disountedBooks.find((discountedBook) => {
 console.log(fullPricedBook);
 
 
+const authors = books.map((book) => {
+    return book.author
+})
 
+console.log(authors);
+
+const areAuthorAdults = authors.every((author) => {
+    return author.age >= 18
+})
+
+console.log(areAuthorAdults);
+
+authors.sort((a, b) => b.age - a.age)
+
+console.log(authors);
+
+
+const age = authors.map((author) => author.age)
+
+console.log(age);
+
+const agesSum = age.reduce((acc, cur) => {
+    return acc + cur
+})
+
+console.log(agesSum);
+
+
+console.log(agesSum / age.length);
